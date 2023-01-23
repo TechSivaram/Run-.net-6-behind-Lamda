@@ -18,6 +18,8 @@ public.ecr.aws/lambda/dotnet:6.2023.01.11.07
 
 Following small piece of code can do the needed magic
 
+CMD [ "xyz::xyz.LambdaEntryPoint::FunctionHandlerAsync" ]
+
 ![image](https://user-images.githubusercontent.com/85802871/213964357-1bd02e30-d416-404f-8b63-7bd8f4459781.png)
 
 
