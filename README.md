@@ -6,6 +6,8 @@ Some API causing the asp.net core API server to hang or crash
 
 Idea is divert the traffic of those problem (but very much needed for functionality) API to temporary isolated Eexution environment like lamda.
 
+All .net 6, Lamda & AWS images do have arm support. So we can get cost benefit from AWS arm processors.
+
 Dockerizing the existing code using by following the below link. Struggled a lot to connect these dots. So adding all these here
 
 public.ecr.aws/lambda/dotnet:6.2023.01.11.07
