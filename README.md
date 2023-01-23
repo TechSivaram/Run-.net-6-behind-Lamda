@@ -6,6 +6,19 @@ Some API causing the asp.net core API server to hang or crash
 
 Idea is divert the traffic of those problem (but very much needed for functionality) API to temporary isolated Eexution environment like lamda.
 
+Dockerizing the existing code using by following the below link. Struggled a lot to connect these dots. So adding all these here
+
+public.ecr.aws/lambda/dotnet:6.2023.01.11.07
+
+
+![image](https://user-images.githubusercontent.com/85802871/213964892-d223e166-ed90-4590-ae3f-f28b9b861b12.png)
+
+
+Following small piece of code can do the neded magic
+
+![image](https://user-images.githubusercontent.com/85802871/213964357-1bd02e30-d416-404f-8b63-7bd8f4459781.png)
+
+
 # Chalenge -
 
 ## Shared file system.
@@ -28,4 +41,5 @@ Ex: Static files like photos, reports...
 ## Reach via load alancer- 
 Yes, ALB supports target groups with lambda target. 
 
-In ALB listner rules adding path rule to forward it to lambda trigger. Lamda console do provide this 
+In ALB listner rules adding path rule to forward it to lambda trigger. Lamda console do provide this.
+I do recommend use it, because AWS console takes care of many permissions.
